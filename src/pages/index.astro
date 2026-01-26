@@ -1,0 +1,27 @@
+---
+import Layout from '@/layouts/main.astro';
+import Hero from '@/components/sections/Hero.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+
+import data from '@/data/data.json';
+---
+
+<Layout
+  lang={data.site.lang}
+  title={data.site.title}
+  description={data.site.description}
+  canonical={data.site.url}
+>
+  <Header />
+
+  <main class="flex-1">
+    <Hero
+      data={{
+        title: 'Build something amazing today',
+      }}
+    />
+  </main>
+
+  <Footer />
+</Layout>

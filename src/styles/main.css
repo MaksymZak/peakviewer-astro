@@ -1,0 +1,11 @@
+body {
+  @apply font-inter bg-white;
+}
+
+.section {
+  @apply py-10 xl:py-20;
+}
+
+.section-title {
+  @apply font-inter;
+}

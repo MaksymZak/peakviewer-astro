@@ -1,0 +1,9 @@
+@theme {
+  --breakpoint-*: initial;
+  --breakpoint-sm: 30rem; /* 480px */
+  --breakpoint-md: 48rem; /* 768px */
+  --breakpoint-xl: 75rem; /* 1200px */
+
+  --font-inter: 'Inter', sans-serif;
+  --font-poppins: 'Poppins', sans-serif;
+}
