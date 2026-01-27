@@ -8,22 +8,80 @@
 
   "hero": {
     "id": "hero",
-    "title": "Build Something Amazing Today"
+    "title": "Peekviewer Instagram Story Viewer",
+    "description": "What is the first app you open on your phone in the morning? Chances are high that it is Instagram. Since Instagram alerts users when someone views their stories, it's natural to look for a more private way to browse. Peekviewer offers a smooth and secure way to view Instagram stories anonymously without login or registration, and no data collected. The anonymous Instagram story viewer is designed for those who value simplicity, privacy, and quiet browsing of publicly available content.",
+    "btnText": "Try now"
   },
 
-  "header": {
-    "id": "header",
-    "nav": [
-      { "text": "Features", "href": "#features" },
-      { "text": "About", "href": "#about" },
-      { "text": "Contact", "href": "#contact" }
+  "purpose": {
+    "id": "purpose",
+    "title": "<span class=\"gradient-text\">Why Do You Need</span> the Peekviewer Instagram Story Viewer?",
+    "descriptionList": [
+      "When you access public pages and watch their stories, they know about it. Your icon appears at the bottom left corner, and the story creator can see it. It is hard to disagree that it's not always convenient, and it is the main reason why people search for an app to view Instagram stories anonymously.",
+      "Or when you log into Instagram and look through the feed or list of potential friends, you will see that many pages are hidden from you. It happens because they set their pages to private, and you need to follow them and get their approval before you can see their content."
+    ],
+    "subtitle": "So, when can Peekviewer be useful?",
+    "list": [
+      {
+        "emoji": "U+1F466",
+        "title": "Track children",
+        "text": "Many teens limit who can view their Instagram stories – often excluding parents or family. Peekviewer offers a private way for parents to watch Instagram stories anonymously without registering an IG account."
+      },
+      {
+        "emoji": "U+1F469",
+        "title": "Analyze competitors",
+        "text": "Anonymous Instagram story viewer services are extremely valuable for those who do business on Instagram. Such apps allow them to analyze their competitors and gather needed information anonymously."
+      },
+      {
+        "emoji": "U+1F491",
+        "title": "Monitor influencers",
+        "text": "Want to understand how influencers engage with their audience? Peekviewer allows you to view stories, posts, and interaction patterns without logging in – perfect for marketers and agencies tracking campaigns, trends, or influencer partnerships."
+      },
+      {
+        "emoji": "U+1F440",
+        "title": "Curiosity",
+        "text": "Whether you're looking into a public figure's profile or browsing trending content, sometimes you just want to explore Insta without leaving a trail. Peekviewer keeps things simple and private, so you can browse Instagram content with peace of mind."
+      }
     ]
   },
 
-  "footer": {
-    "links": [
-      { "text": "Privacy Policy", "href": "/privacy" },
-      { "text": "Terms of Service", "href": "/terms" }
+  "steps": {
+    "id": "steps",
+    "title": "<span class=\"gradient-text-dark\">How to Use Instagram</span> Anonymous Account Viewer Peekviewer",
+    "description": "So, in a few words, what is Peekviewer? It is a secret Instagram story viewer that allows people to use their right to privacy and stay on the crest of events. A great everyday helper, so to speak. You can start using it in 3 simple steps.",
+    "list": [
+      {
+        "step": "Step 1",
+        "text": "Sign up and select the payment plan."
+      },
+      {
+        "step": "Step 2",
+        "text": "Paste their IG nickname or page link."
+      },
+      {
+        "step": "Step 3",
+        "text": "View private stories in a hidden mode."
+      }
     ]
+  },
+
+  "benefits": {
+    "id": "benefits",
+    "title": "Key Benefits"
+  },
+
+  "reviews": {
+    "id": "reviews",
+    "title": "User Reviews"
+  },
+
+  "try": {
+    "id": "try",
+    "title": "Try Peekviewer Now"
+  },
+
+  "faq": {
+    "id": "faq",
+    "title": "Frequently Asked Questions"
   }
 }

@@ -1,0 +1,42 @@
+---
+interface Step {
+  step: string;
+  text: string;
+}
+
+interface Props {
+  data: {
+    title: string;
+    description: string;
+    list: Step[];
+  };
+}
+
+const {
+  data: { title, description, list },
+} = Astro.props;
+---
+
+<section class="section section-steps">
+  <div class="container">
+    <div>
+      <h2
+        class="section-title text-center text-white md:mx-auto md:max-w-150 xl:max-w-191"
+        set:html={title}
+      />
+
+      <p class="">{description}</p>
+
+      <ul class="">
+        {
+          list.map(item => (
+            <li class="">
+              <span class="">{item.step}</span>
+              <span class="">{item.text}</span>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</section>

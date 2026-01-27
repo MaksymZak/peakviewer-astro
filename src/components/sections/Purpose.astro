@@ -1,0 +1,62 @@
+---
+interface Props {
+  data: {
+    title: string;
+    descriptionList: string[];
+    subtitle: string;
+    list: Array<{
+      emoji: string;
+      title: string;
+      text: string;
+    }>;
+  };
+}
+
+const {
+  data: { title, descriptionList, subtitle, list },
+} = Astro.props;
+
+// Convert Unicode emoji codes to actual emojis
+const getEmoji = (emojiCode: string) => {
+  const codePoint = emojiCode.replace('U+', '0x');
+  return String.fromCodePoint(parseInt(codePoint, 16));
+};
+---
+
+<section class="section">
+  <div class="container">
+    <h2
+      class="section-title text-center text-[#2d3035] md:mx-auto md:max-w-150 xl:max-w-191"
+      set:html={title}
+    />
+
+    <div
+      class="mt-6 grid grid-cols-1 gap-8 text-base leading-normal text-[#55618a] md:grid md:grid-cols-2 md:gap-5 xl:mt-16 xl:gap-14 xl:text-lg"
+    >
+      {descriptionList.map(description => <p>{description}</p>)}
+    </div>
+
+    <h3
+      class="font-poppins mt-6 text-center text-2xl leading-snug font-semibold text-[#2d3035] md:mt-16 xl:text-[28px] xl:leading-snug"
+    >
+      {subtitle}
+    </h3>
+
+    <ul class="mt-11 grid grid-cols-1 gap-4 md:grid-cols-2 xl:mx-auto xl:max-w-237">
+      {
+        list.map(item => (
+          <li class="rounded-[24px] bg-[#f6f6f9] p-4 xl:p-8">
+            <div class="flex items-center gap-3">
+              <span class="inline-block size-10 min-w-10">img</span>
+              <h4 class="font-inter text-lg leading-[1.4] font-semibold text-[#2d3035]">
+                {item.title}
+              </h4>
+            </div>
+
+            <p class="mt-4 text-base leading-normal text-[#55618a]">{item.text}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>

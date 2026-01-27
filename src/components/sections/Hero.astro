@@ -1,18 +1,46 @@
 ---
+import Button from '../Button.astro';
+
 interface Props {
   data: {
     title: string;
+    description: string;
+    btnText: string;
   };
 }
 
 const {
-  data: { title },
+  data: { title, description, btnText },
 } = Astro.props;
 ---
 
-<section class="">
-  <!-- Main Title -->
-  <h1 class="">
-    {title}
-  </h1>
+<section class="relative overflow-hidden pt-10 pb-1 xl:pt-18 xl:pb-34">
+  <div class="container">
+    <div class="xl:max-w-118.5">
+      <h1
+        class="font-poppins text-center text-[32px] leading-[1.2] font-semibold text-white md:mx-auto md:max-w-125 md:text-5xl xl:mx-0 xl:max-w-none xl:text-start xl:text-6xl"
+      >
+        {title}
+      </h1>
+
+      <p class="font-poppins mt-8 text-sm leading-[1.4] text-white md:text-base">
+        {description}
+      </p>
+
+      <Button class="mt-8 xl:w-auto xl:min-w-60">{btnText}</Button>
+    </div>
+
+    <picture>
+      <source srcset="./images/sections/hero/container@3x.webp" media="(min-width: 768px)" />
+      <img
+        src="./images/sections/hero/container@2x.webp"
+        srcset="./images/sections/hero/container@2x.webp 2x, ./images/sections/hero/container@3x.webp 3x"
+        alt="Hero section image"
+        class="relative left-1/2 mt-5 min-w-[calc(100vw+2rem)] -translate-x-1/2 md:w-full md:min-w-0 xl:absolute xl:top-[47%] xl:left-[calc(50%+290px)] xl:h-auto xl:w-169.5 xl:-translate-y-1/2"
+        loading="lazy"
+        width="360"
+        height="345"
+      />
+    </picture>
+  </div>
 </section>

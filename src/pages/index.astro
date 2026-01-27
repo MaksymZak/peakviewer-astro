@@ -1,6 +1,12 @@
 ---
 import Layout from '@/layouts/main.astro';
 import Hero from '@/components/sections/Hero.astro';
+import Purpose from '@/components/sections/Purpose.astro';
+import Steps from '@/components/sections/Steps.astro';
+import Benefits from '@/components/sections/Benefits.astro';
+import Reviews from '@/components/sections/Reviews.astro';
+import Try from '@/components/sections/Try.astro';
+import FAQ from '@/components/sections/FAQ.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
 
@@ -13,14 +19,18 @@ import data from '@/data/data.json';
   description={data.site.description}
   canonical={data.site.url}
 >
-  <Header />
+  <div class="header-hero-wrapper">
+    <Header />
+    <Hero data={data.hero} />
+  </div>
 
   <main class="flex-1">
-    <Hero
-      data={{
-        title: 'Build something amazing today',
-      }}
-    />
+    <Purpose data={data.purpose} />
+    <Steps data={data.steps} />
+    <Benefits data={data.benefits} />
+    <Reviews data={data.reviews} />
+    <Try data={data.try} />
+    <FAQ data={data.faq} />
   </main>
 
   <Footer />
