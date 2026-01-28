@@ -19,3 +19,7 @@ body {
     radial-gradient(circle at 50% 100%, #0049b5, #002b6b 25%, #1f1a22 46%),
     linear-gradient(to bottom, #171a23, #171a23);
 }
+
+.gradient-text {
+  @apply bg-linear-to-r from-[#4a55f4] to-[#2aafec] bg-clip-text text-transparent;
+}

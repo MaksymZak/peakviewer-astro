@@ -19,24 +19,49 @@ const {
 
 <section class="section section-steps">
   <div class="container">
-    <div>
-      <h2
-        class="section-title text-center text-white md:mx-auto md:max-w-150 xl:max-w-191"
-        set:html={title}
-      />
+    <h2
+      class="section-title text-center text-balance text-white md:mx-auto md:max-w-150 xl:max-w-191"
+      set:html={title}
+    />
 
-      <p class="">{description}</p>
+    <div
+      class="wrapper mt-6 xl:mx-auto xl:mt-16 xl:grid xl:max-w-[964px] xl:grid-cols-[485px_1fr] xl:items-center xl:justify-between xl:gap-[114px]"
+    >
+      <div class="">
+        <p class="text-base text-[#F0F1F2] xl:text-lg xl:leading-[1.6] xl:text-[#D4DCF3]">
+          {description}
+        </p>
 
-      <ul class="">
-        {
-          list.map(item => (
-            <li class="">
-              <span class="">{item.step}</span>
-              <span class="">{item.text}</span>
-            </li>
-          ))
-        }
-      </ul>
+        <ul class="mt-4 grid grid-cols-1 gap-6 xl:mt-16">
+          {
+            list.map((item, idx) => (
+              <li class="flex items-center gap-5">
+                <span class="flex size-12 min-w-12 items-center justify-center rounded-full bg-[#002B6B] text-lg leading-none font-medium text-white xl:h-auto xl:w-auto xl:rounded-[99px] xl:px-5 xl:py-3 xl:text-[#9DADFF]">
+                  <span class="mr-1 hidden xl:inline-block">{item.step}</span>{' '}
+                  <span class="xl:inline-block">{idx + 1}</span>
+                </span>
+
+                <p class="text-lg leading-[1.6] text-[#F0F1F2] xl:text-[#D4DCF3]">{item.text}</p>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <picture>
+        <source
+          srcset="./images/sections/steps/mobile-md.webp"
+          type="image/webp"
+          media="(max-width: 768px)"
+        />
+        <img
+          class="mx-auto mt-4 h-auto w-full max-w-[390px] xl:mx-0 xl:mt-0 xl:w-full xl:max-w-none"
+          src="./images/sections/steps/mobile-sm.webp"
+          alt="Mobile phone"
+          width=""
+          height=""
+          loading="lazy"
+        />
+      </picture>
     </div>
   </div>
 </section>

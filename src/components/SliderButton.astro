@@ -1,0 +1,28 @@
+---
+import { Icon } from 'astro-icon/components';
+import { cn } from '@/lib/utils';
+import type { HTMLAttributes } from 'astro/types';
+
+interface Props extends HTMLAttributes<'button'> {
+  class?: string;
+  direction?: 'left' | 'right';
+}
+
+const { class: className = '', direction = 'left', ...rest } = Astro.props;
+---
+
+<button
+  type="button"
+  {...rest}
+  class={cn(
+    'flex size-12 min-w-12 cursor-pointer text-[#55618a] items-center justify-center rounded-2xl border border-[#cdd1df] outline-none transition-all hover:border-[#005ee8] focus-visible:ring-2 focus-visible:ring-[#005ee8] focus-visible:ring-offset-2 focus-visible:ring-offset-white focus-visible:border-[#005ee8] hover:text-[#005ee8]  disabled:cursor-not-allowed disabled:opacity-50 focus-visible:text-[#005ee8]  md:size-12 xxl:size-14',
+    className
+  )}
+>
+  <Icon
+    class={cn('size-6 pointer-events-none ', direction === 'left' ? '' : 'rotate-180')}
+    aria-label={`Кнопка ${direction === 'left' ? 'назад' : 'вперед'}`}
+    name="slider-arrow"
+    size={24}
+  />
+</button>

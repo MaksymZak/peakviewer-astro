@@ -23,22 +23,22 @@
     "subtitle": "So, when can Peekviewer be useful?",
     "list": [
       {
-        "emoji": "U+1F466",
+        "emoji": "1",
         "title": "Track children",
         "text": "Many teens limit who can view their Instagram stories – often excluding parents or family. Peekviewer offers a private way for parents to watch Instagram stories anonymously without registering an IG account."
       },
       {
-        "emoji": "U+1F469",
+        "emoji": "2",
         "title": "Analyze competitors",
         "text": "Anonymous Instagram story viewer services are extremely valuable for those who do business on Instagram. Such apps allow them to analyze their competitors and gather needed information anonymously."
       },
       {
-        "emoji": "U+1F491",
+        "emoji": "3",
         "title": "Monitor influencers",
         "text": "Want to understand how influencers engage with their audience? Peekviewer allows you to view stories, posts, and interaction patterns without logging in – perfect for marketers and agencies tracking campaigns, trends, or influencer partnerships."
       },
       {
-        "emoji": "U+1F440",
+        "emoji": "4",
         "title": "Curiosity",
         "text": "Whether you're looking into a public figure's profile or browsing trending content, sometimes you just want to explore Insta without leaving a trail. Peekviewer keeps things simple and private, so you can browse Instagram content with peace of mind."
       }
@@ -47,19 +47,19 @@
 
   "steps": {
     "id": "steps",
-    "title": "<span class=\"gradient-text-dark\">How to Use Instagram</span> Anonymous Account Viewer Peekviewer",
+    "title": "<span class=\"gradient-text\">How to Use Instagram</span> Anonymous Account Viewer Peekviewer",
     "description": "So, in a few words, what is Peekviewer? It is a secret Instagram story viewer that allows people to use their right to privacy and stay on the crest of events. A great everyday helper, so to speak. You can start using it in 3 simple steps.",
     "list": [
       {
-        "step": "Step 1",
+        "step": "Step",
         "text": "Sign up and select the payment plan."
       },
       {
-        "step": "Step 2",
+        "step": "Step",
         "text": "Paste their IG nickname or page link."
       },
       {
-        "step": "Step 3",
+        "step": "Step",
         "text": "View private stories in a hidden mode."
       }
     ]
@@ -67,7 +67,15 @@
 
   "benefits": {
     "id": "benefits",
-    "title": "Key Benefits"
+    "title": "<span class=\"gradient-text\">The Advantages</span> of Viewing Instagram Stories with Peekviewer",
+    "text": "Why is Peekviewer your top 1 choice to watch Instagram stories without logging in? Here's what makes it a trusted and privacy-focused tool:",
+    "list": [
+      {
+        "icon": "",
+        "title": "",
+        "text": ""
+      }
+    ]
   },
 
   "reviews": {

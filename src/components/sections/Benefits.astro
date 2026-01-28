@@ -1,19 +1,76 @@
 ---
+import SliderButton from '@/components/SliderButton.astro';
+
 interface Props {
   data: {
+    id: string;
     title: string;
+    text: string;
+    list: Array<{
+      icon: string;
+      title: string;
+      text: string;
+    }>;
   };
 }
 
 const {
-  data: { title },
+  data: { id, title, text, list },
 } = Astro.props;
 ---
 
-<section class="section">
+<section class="section benefits" id={id}>
   <div class="container">
-    <h2 class="section-title">
-      {title}
-    </h2>
+    <h2 class="section-title text-center text-[#2d3035]" set:html={title} />
+
+    <p
+      class="mt-6 text-center text-base leading-normal text-[#55618a] md:mx-auto md:max-w-191 xl:text-lg"
+    >
+      {text}
+    </p>
+
+    <div class="swiper-container relative mt-12">
+      <div class="swiper-wrapper">
+        {
+          list.map(item => (
+            <div class="swiper-slide !w-auto">
+              <div class="rounded-[24px] bg-[#f6f6f9] p-4 xl:p-8">
+                <div class="flex items-center gap-3">
+                  <span class="inline-block size-10 min-w-10">{item.icon}</span>
+                  <h4 class="font-inter text-lg leading-[1.4] font-semibold text-[#2d3035]">
+                    {item.title}
+                  </h4>
+                </div>
+
+                <p class="mt-4 text-base leading-normal text-[#55618a]">{item.text}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+
+      <SliderButton class="button-prev" direction="left" />
+      <SliderButton class="button-next" direction="right" />
+    </div>
   </div>
 </section>
+
+<script>
+  import Swiper from 'swiper';
+  import { Navigation } from 'swiper/modules';
+  import 'swiper/css';
+  import 'swiper/css/navigation';
+
+  new Swiper('.benefits .swiper-container', {
+    navigation: {
+      nextEl: '.benefits .button-next',
+      prevEl: '.benefits .button-prev',
+    },
+    grabCursor: true,
+    speed: 500,
+    slidesPerView: 'auto',
+    spaceBetween: 16,
+
+    modules: [Navigation],
+  });
+</script>
