@@ -1,9 +1,9 @@
 {
   "site": {
     "lang": "en",
-    "title": "Your Brand",
-    "description": "Build something amazing with our landing page starter.",
-    "url": "https://example.com"
+    "title": "Peekviewer - Anonymous Instagram Story Viewer",
+    "description": "View Instagram stories anonymously without login. Peekviewer offers private, secure browsing of Instagram content with no registration or data collection required.",
+    "url": "/"
   },
 
   "hero": {

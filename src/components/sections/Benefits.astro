@@ -43,7 +43,8 @@ const {
                   loading="lazy"
                   width="32"
                   height="32"
-                  alt="decorative icon"
+                  alt=""
+                  aria-hidden="true"
                 />
               </div>
               <h4 class="mt-6 text-center text-2xl leading-[1.4] font-semibold text-[#05012C] xl:mt-8">
@@ -73,28 +74,30 @@ const {
   import 'swiper/css';
   import 'swiper/css/navigation';
 
-  new Swiper('.benefits .swiper-container', {
-    navigation: {
-      nextEl: '.benefits .button-next',
-      prevEl: '.benefits .button-prev',
-    },
-    centeredSlides: true,
-    initialSlide: 1,
-    grabCursor: true,
-    speed: 500,
-    slidesPerView: 'auto',
-    spaceBetween: 16,
-    modules: [Navigation],
-    breakpoints: {
-      768: {
-        slidesPerView: 1,
-        width: 389,
+  document.addEventListener('DOMContentLoaded', () => {
+    new Swiper('.benefits .swiper-container', {
+      navigation: {
+        nextEl: '.benefits .button-next',
+        prevEl: '.benefits .button-prev',
       },
-      1200: {
-        slidesPerView: 1,
-        width: 389,
-        centeredSlides: true,
+      centeredSlides: true,
+      initialSlide: 1,
+      grabCursor: true,
+      speed: 500,
+      slidesPerView: 'auto',
+      spaceBetween: 16,
+      modules: [Navigation],
+      breakpoints: {
+        768: {
+          slidesPerView: 1,
+          width: 389,
+        },
+        1200: {
+          slidesPerView: 1,
+          width: 389,
+          centeredSlides: true,
+        },
       },
-    },
+    });
   });
 </script>

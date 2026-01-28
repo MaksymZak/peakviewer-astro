@@ -37,7 +37,8 @@ const {
                   loading="lazy"
                   width="48"
                   height="48"
-                  alt="decorative icon"
+                  alt=""
+                  aria-hidden="true"
                 />
                 <h3 class="text-lg font-semibold text-[#2D3035]">{item.name}</h3>
               </div>
@@ -61,23 +62,25 @@ const {
   import 'swiper/css';
   import 'swiper/css/navigation';
 
-  new Swiper('.reviews .swiper-container', {
-    navigation: {
-      nextEl: '.reviews .button-next',
-      prevEl: '.reviews .button-prev',
-    },
-
-    grabCursor: true,
-    speed: 400,
-    slidesPerView: 'auto',
-    spaceBetween: 16,
-    modules: [Navigation],
-    breakpoints: {
-      768: {
-        slidesPerView: 2,
-        width: null,
+  document.addEventListener('DOMContentLoaded', () => {
+    new Swiper('.reviews .swiper-container', {
+      navigation: {
+        nextEl: '.reviews .button-next',
+        prevEl: '.reviews .button-prev',
       },
-      1200: { slidesPerView: 1, width: 376 },
-    },
+
+      grabCursor: true,
+      speed: 400,
+      slidesPerView: 'auto',
+      spaceBetween: 16,
+      modules: [Navigation],
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+          width: null,
+        },
+        1200: { slidesPerView: 1, width: 376 },
+      },
+    });
   });
 </script>
