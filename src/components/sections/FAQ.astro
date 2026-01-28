@@ -1,19 +1,33 @@
 ---
+import { FAQAccordion } from '../ui/faq-accordion';
+
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
 interface Props {
   data: {
     title: string;
+    list: FAQItem[];
   };
 }
 
 const {
-  data: { title },
+  data: { title, list },
 } = Astro.props;
 ---
 
-<section class="section">
+<section class="section bg-[#F6F6F9]">
   <div class="container">
-    <h2 class="section-title">
-      {title}
-    </h2>
+    <div class="xl:mx-auto xl:max-w-3xl">
+      <h2 class="section-title text-center text-[#2D3035]">
+        {title}
+      </h2>
+
+      <div class="mt-8">
+        <FAQAccordion items={list} client:load />
+      </div>
+    </div>
   </div>
 </section>

@@ -1,0 +1,1 @@
+import{S as e,N as i}from"./navigation.tH6tEgou.js";new e(".benefits .swiper-container",{navigation:{nextEl:".benefits .button-next",prevEl:".benefits .button-prev"},centeredSlides:!0,initialSlide:1,grabCursor:!0,speed:500,slidesPerView:"auto",spaceBetween:16,modules:[i],breakpoints:{768:{slidesPerView:1,width:389},1200:{slidesPerView:1,width:389,centeredSlides:!0}}});

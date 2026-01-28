@@ -23,3 +23,17 @@ body {
 .gradient-text {
   @apply bg-linear-to-r from-[#4a55f4] to-[#2aafec] bg-clip-text text-transparent;
 }
+
+section.try .gradient-bg {
+  background: radial-gradient(99.96% 100% at 50% 0%, #0049b5 0%, #002b6b 30.04%, #1f1a22 55.26%);
+
+  @variant md {
+    background: none;
+  }
+}
+
+.gradient-bg-md {
+  @variant md {
+    background: radial-gradient(99.96% 100% at 50% 0%, #0049b5 0%, #002b6b 30.04%, #1f1a22 55.26%);
+  }
+}

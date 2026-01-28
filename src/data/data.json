@@ -138,11 +138,47 @@
 
   "try": {
     "id": "try",
-    "title": "Try Peekviewer Now"
+    "title": "Try an <span class=\"gradient-text\">anonymous story viewer</span> Peekviewer and feel all the advantages!",
+    "text": "Stay invisible while browsing stories—no logins, no footprints, just full privacy and ease of use.",
+    "btnText": "Watch now"
   },
 
   "faq": {
     "id": "faq",
-    "title": "Frequently Asked Questions"
+    "title": "Have Questions About an Anonymous Instagram Story Viewer?",
+    "list": [
+      {
+        "question": "How does an anonymous Instagram story viewer work?",
+        "answer": "After you sign up with our anonymous Instagram story viewer, you need to paste the name or link for the page you want to view into the search bar. The service needs some time to access the chosen page and extract all the content into your online user space. You will be able to view stories and other content without any extra steps or hassle. All the hard work is done behind the scenes."
+      },
+      {
+        "question": "Is Peekviewer safe?",
+        "answer": "Peekviewer is completely safe. It does not require you to provide your personal information during registration, it does not ask you to show your ID, and it values your privacy and security. You can view Instagram stories anonymously with us and be sure that you are covered from all sides."
+      },
+      {
+        "question": "How long does it take to get information from an Instagram account?",
+        "answer": "If you use our anonymous Instagram story viewer app to view a public page, it takes up to 24 hours. Viewing private pages usually takes a bit longer, but not too much, due to some technical peculiarities and IG security protocols."
+      },
+      {
+        "question": "Does Peekviewer work with private accounts?",
+        "answer": "Yes, Peekviewer is one of a few Instagram story viewer apps that work with private accounts. Extracting information from private accounts may take a bit longer than from public ones, but ultimately, you'll gain access to all private stories and other content."
+      },
+      {
+        "question": "Do I need an Instagram account to use Peekviewer?",
+        "answer": "No, you do not need to register with Instagram to start using Peekviewer. The service is not linked to IG in any way. If you use our secret Instagram story viewer, you only need to log in to your online user space to view the tracked profile."
+      },
+      {
+        "question": "What about customer support?",
+        "answer": "Peekviewer's customer support is responsive and always ready to help. Should you have any problems, feel free to contact us 24/7 to get everything solved. Our main task is that your experience using our anonymous Instagram account viewer  is only positive! If you purchase the premium support package, you'll have access to assistance not only through live chat and email but also via a personal support agent over the phone."
+      },
+      {
+        "question": "Should I share my Instagram login details to use Peekviewer?",
+        "answer": "No, you never need to share your Instagram username or password with Peekviewer anonymous Instagram story viewer app. The platform is designed to protect your privacy, and your Instagram account is never linked in any way. As a general rule, if any tool asks for your Instagram credentials, it's best to avoid it – that's often a sign of a scam."
+      },
+      {
+        "question": "Does the Peekviewer story viewer work on iPhone and Android?",
+        "answer": "Our incognito Instagram story viewer works online, so the platform does not matter at all. You can access your online dashboard from any device or browser. It works equally well with PCs, laptops, iOS, Android, and even Blackberry!"
+      }
+    ]
   }
 }

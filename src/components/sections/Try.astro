@@ -1,19 +1,32 @@
 ---
+import Button from '../Button.astro';
+
 interface Props {
   data: {
     title: string;
+    text: string;
+    btnText: string;
   };
 }
 
 const {
-  data: { title },
+  data: { title, text, btnText },
 } = Astro.props;
 ---
 
-<section class="section">
-  <div class="container">
-    <h2 class="section-title">
-      {title}
-    </h2>
+<section class="section try">
+  <div class="gradient-bg max-md:py-16">
+    <div class="container">
+      <div class="gradient-bg-md md:rounded-[32px] md:p-16 xl:mx-auto xl:max-w-241">
+        <h2
+          class="section-title text-center text-balance text-white md:mx-auto xl:max-w-191"
+          set:html={title}
+        />
+
+        <p class="mt-6 text-center text-base text-[#F0F1F2] md:mx-auto md:max-w-125">{text}</p>
+
+        <Button class="mx-auto mt-8 block w-auto min-w-46 xl:mt-8">{btnText}</Button>
+      </div>
+    </div>
   </div>
 </section>

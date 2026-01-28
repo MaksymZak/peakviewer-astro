@@ -1,0 +1,1 @@
+import{S as e,N as i}from"./navigation.tH6tEgou.js";new e(".reviews .swiper-container",{navigation:{nextEl:".reviews .button-next",prevEl:".reviews .button-prev"},grabCursor:!0,speed:400,slidesPerView:"auto",spaceBetween:16,modules:[i],breakpoints:{768:{slidesPerView:2,width:null},1200:{slidesPerView:1,width:376}}});
