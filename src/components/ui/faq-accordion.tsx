@@ -16,7 +16,7 @@ export function FAQAccordion({ items }: FAQAccordionProps) {
       {items.map((item, index) => (
         <AccordionItem
           key={index}
-          className="rounded-3xl border border-[#CDD1DF] bg-white"
+          className="rounded-3xl border border-[#CDD1DF] bg-white transition-colors data-[state=open]:border-[#0067FF] xl:hover:border-[#0067FF]"
           value={item.question}
         >
           <AccordionTrigger className="gap-2 px-3 py-3 text-start text-base font-semibold text-[#2D3035] md:gap-3 md:p-4 md:text-lg">
