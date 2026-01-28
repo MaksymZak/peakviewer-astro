@@ -1,5 +1,6 @@
 ---
 import SliderButton from '@/components/SliderButton.astro';
+import Button from '../Button.astro';
 
 interface Props {
   data: {
@@ -11,46 +12,57 @@ interface Props {
       title: string;
       text: string;
     }>;
+    btnText: string;
   };
 }
 
 const {
-  data: { id, title, text, list },
+  data: { title, text, list, btnText },
 } = Astro.props;
 ---
 
-<section class="section benefits" id={id}>
+<section class="section benefits overflow-hidden">
   <div class="container">
-    <h2 class="section-title text-center text-[#2d3035]" set:html={title} />
+    <h2
+      class="section-title text-center text-[#2d3035] xl:mx-auto xl:max-w-[767px]"
+      set:html={title}
+    />
 
-    <p
-      class="mt-6 text-center text-base leading-normal text-[#55618a] md:mx-auto md:max-w-191 xl:text-lg"
-    >
+    <p class="mt-5 text-center text-base leading-normal text-[#7A798C] xl:mx-auto xl:max-w-[580px]">
       {text}
     </p>
 
-    <div class="swiper-container relative mt-12">
+    <div class="swiper-container relative mt-6 md:-mx-8 xl:-mx-5 xl:mt-8">
       <div class="swiper-wrapper">
         {
           list.map(item => (
-            <div class="swiper-slide !w-auto">
-              <div class="rounded-[24px] bg-[#f6f6f9] p-4 xl:p-8">
-                <div class="flex items-center gap-3">
-                  <span class="inline-block size-10 min-w-10">{item.icon}</span>
-                  <h4 class="font-inter text-lg leading-[1.4] font-semibold text-[#2d3035]">
-                    {item.title}
-                  </h4>
-                </div>
-
-                <p class="mt-4 text-base leading-normal text-[#55618a]">{item.text}</p>
+            <div class="swiper-slide flex! h-auto! flex-col rounded-[24px] bg-[#f6f6f9] p-4 xl:p-8">
+              <div class="mx-auto flex size-14 items-center justify-center rounded-2xl bg-[#CAD8FF]">
+                <img
+                  src={`./images/sections/benefits/${item.icon}.svg`}
+                  loading="lazy"
+                  width="32"
+                  height="32"
+                  alt="decorative icon"
+                />
               </div>
+              <h4 class="mt-6 text-center text-2xl leading-[1.4] font-semibold text-[#05012C] xl:mt-8">
+                {item.title}
+              </h4>
+              <p class="mt-3 text-center text-base leading-normal text-[#3C3A4F]">
+                {item.text}
+              </p>{' '}
             </div>
           ))
         }
       </div>
 
-      <SliderButton class="button-prev" direction="left" />
-      <SliderButton class="button-next" direction="right" />
+      <div class="mt-6 flex items-center justify-center gap-2">
+        <SliderButton class="button-prev" direction="left" />
+        <SliderButton class="button-next" direction="right" />
+      </div>
+
+      <Button class="mt-6 xl:mx-auto xl:mt-8 xl:block xl:w-auto xl:min-w-[184px]">{btnText}</Button>
     </div>
   </div>
 </section>
@@ -66,11 +78,23 @@ const {
       nextEl: '.benefits .button-next',
       prevEl: '.benefits .button-prev',
     },
+    centeredSlides: true,
+    initialSlide: 1,
     grabCursor: true,
     speed: 500,
     slidesPerView: 'auto',
     spaceBetween: 16,
-
     modules: [Navigation],
+    breakpoints: {
+      768: {
+        slidesPerView: 1,
+        width: 389,
+      },
+      1200: {
+        slidesPerView: 1,
+        width: 389,
+        centeredSlides: true,
+      },
+    },
   });
 </script>

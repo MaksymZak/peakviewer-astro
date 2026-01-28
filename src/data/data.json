@@ -69,18 +69,71 @@
     "id": "benefits",
     "title": "<span class=\"gradient-text\">The Advantages</span> of Viewing Instagram Stories with Peekviewer",
     "text": "Why is Peekviewer your top 1 choice to watch Instagram stories without logging in? Here's what makes it a trusted and privacy-focused tool:",
+    "btnText": "Watch now",
     "list": [
       {
-        "icon": "",
-        "title": "",
-        "text": ""
+        "icon": "1",
+        "title": "Privacy first",
+        "text": "Peekviewer is a safe Instagram story viewer. We never ask for your Instagram login or any personal account details. Signing up only requires your email – your Instagram activity stays separate and secure, ensuring a safe browsing experience every time."
+      },
+      {
+        "icon": "2",
+        "title": "Private pages",
+        "text": "If you have tried other services to view an Instagram story anonymously, you might have already noticed that a private page is an unapproachable fortress for them. It is not an issue for Peekviewer, though, as it accesses private pages as easily as public ones."
+      },
+      {
+        "icon": "3",
+        "title": "No installation",
+        "text": "Peekviewer anonymous Instagram story viewer is entirely web-based, meaning there is no app to download or install. It operates directly through the official website. After registration, you'll get access to a personal dashboard where all tracked content, including stories, can be viewed and easily downloaded to your device if needed."
+      },
+      {
+        "icon": "4",
+        "title": "Access anytime",
+        "text": "Stories can disappear fast, but with Peekviewer, they're saved to your personal dashboard for up to 3 months. That means you can revisit them on your own time, watch an Instagram story anonymously, or download them if you want to keep a copy."
+      },
+      {
+        "icon": "5",
+        "title": "Download",
+        "text": "This feature sets Peekviewer apart from many other incognito Instagram story viewer apps. You can download all the content you view from the page in the same quality. It's perfect for when you need long-term access to tracked content"
       }
     ]
   },
 
   "reviews": {
     "id": "reviews",
-    "title": "User Reviews"
+    "title": "Our customers talk about us",
+    "list": [
+      {
+        "image": "1",
+        "name": "Emily Kim",
+        "text": "I could not complete the payment process for this viewer and then asked for help. The guys answered immediately! They explained to me what the problem was and how to solve it with my bank."
+      },
+      {
+        "image": "2",
+        "name": "Ryan N.",
+        "text": "My competitors started to go on the offensive. And my business partner recommended Peekviewer. The price for this app is not high, but the results I've got are great! I'm surprised."
+      },
+      {
+        "image": "3",
+        "name": "Zoe W.",
+        "text": "I'm a skeptic by nature. I must confess that I wasn't expecting this story viewer to be useful. It really works and is easy to use. I really like that stories are saved for a long time so that I can check them whenever needed."
+      },
+      {
+        "image": "4",
+        "name": "Sophia Delgado",
+        "text": "Honestly saying, I couldn't act another way. My kid has started to use social media too often and behaves differently than usual. This profile viewer will help find out the reason."
+      },
+      {
+        "image": "5",
+        "name": "Ethan Harris",
+        "text": "I know that it is not an honest way to act, but I decided to find out the truth through the social media story viewer. My wife is communicating with some strangers online. And I want to dispel suspicions."
+      },
+      {
+        "image": "6",
+        "name": "Nicole T.",
+        "text": "I think that anonymous profile viewer is the number one way to find out if your spouse is hiding something from you. I was in such a situation, and I know what I'm talking about. Peekviewer shed light on my relationship."
+      }
+    ]
   },
 
   "try": {

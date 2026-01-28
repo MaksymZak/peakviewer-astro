@@ -1,19 +1,82 @@
 ---
+import SliderButton from '@/components/SliderButton.astro';
+
 interface Props {
   data: {
+    id: string;
     title: string;
+    list: Array<{
+      image: string;
+      name: string;
+      text: string;
+    }>;
   };
 }
 
 const {
-  data: { title },
+  data: { title, list },
 } = Astro.props;
 ---
 
-<section class="section">
+<section class="reviews overflow-hidden">
   <div class="container">
-    <h2 class="section-title">
-      {title}
-    </h2>
+    <h2
+      class="section-title text-center text-[#2d3035] xl:mx-auto xl:max-w-[767px]"
+      set:html={title}
+    />
+
+    <div class="swiper-container mt-8">
+      <div class="swiper-wrapper">
+        {
+          list.map(item => (
+            <div class="swiper-slide flex! h-auto! flex-col rounded-[24px] bg-[#f6f6f9] p-4 xl:p-8">
+              <div class="flex items-center gap-4">
+                <img
+                  class="h-auto w-12 min-w-12"
+                  src={`./images/sections/reviews/${item.image}.webp`}
+                  loading="lazy"
+                  width="48"
+                  height="48"
+                  alt="decorative icon"
+                />
+                <h3 class="text-lg font-semibold text-[#2D3035]">{item.name}</h3>
+              </div>
+              <p class="mt-6 text-base leading-normal text-[#55618A]">{item.text}</p>{' '}
+            </div>
+          ))
+        }
+      </div>
+
+      <div class="mt-8 flex items-center justify-center gap-2">
+        <SliderButton class="button-prev" direction="left" />
+        <SliderButton class="button-next" direction="right" />
+      </div>
+    </div>
   </div>
 </section>
+
+<script>
+  import Swiper from 'swiper';
+  import { Navigation } from 'swiper/modules';
+  import 'swiper/css';
+  import 'swiper/css/navigation';
+
+  new Swiper('.reviews .swiper-container', {
+    navigation: {
+      nextEl: '.reviews .button-next',
+      prevEl: '.reviews .button-prev',
+    },
+
+    grabCursor: true,
+    speed: 400,
+    slidesPerView: 'auto',
+    spaceBetween: 16,
+    modules: [Navigation],
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      1200: { slidesPerView: 1, width: 376 },
+    },
+  });
+</script>
