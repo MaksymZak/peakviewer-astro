@@ -32,10 +32,10 @@ const {
           {description}
         </p>
 
-        <ul class="mt-4 grid grid-cols-1 gap-6 xl:mt-16">
+        <ul class="mt-4 grid grid-cols-[auto_1fr] gap-x-5 gap-y-6 xl:mt-16">
           {
             list.map((item, idx) => (
-              <li class="flex items-center gap-5">
+              <li class="col-span-2 grid grid-cols-subgrid items-center">
                 <span class="flex size-12 min-w-12 items-center justify-center rounded-full bg-[#002B6B] text-lg leading-none font-medium text-white xl:h-auto xl:w-auto xl:rounded-[99px] xl:px-5 xl:py-3 xl:text-[#9DADFF]">
                   <span class="mr-1 hidden xl:inline-block">{item.step}</span>{' '}
                   <span class="xl:inline-block">{idx + 1}</span>
