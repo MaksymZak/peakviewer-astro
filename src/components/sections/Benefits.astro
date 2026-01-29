@@ -36,7 +36,7 @@ const {
       <div class="swiper-wrapper">
         {
           list.map(item => (
-            <div class="swiper-slide flex! h-auto! flex-col rounded-[24px] bg-[#f6f6f9] p-4 xl:p-8">
+            <div class="swiper-slide flex! h-auto! flex-col rounded-[24px] bg-[#f6f6f9] p-4 md:w-[389px]! xl:p-8">
               <div class="mx-auto flex size-14 items-center justify-center rounded-2xl bg-[#CAD8FF]">
                 <img
                   src={`./images/sections/benefits/${item.icon}.svg`}
@@ -80,22 +80,28 @@ const {
         nextEl: '.benefits .button-next',
         prevEl: '.benefits .button-prev',
       },
+      modules: [Navigation],
       centeredSlides: true,
       initialSlide: 1,
       grabCursor: true,
       speed: 500,
       slidesPerView: 'auto',
       spaceBetween: 16,
-      modules: [Navigation],
+      observer: true,
+      updateOnWindowResize: true,
+      loop: true,
       breakpoints: {
         768: {
-          slidesPerView: 1,
-          width: 389,
+          slidesPerView: 2,
+          loopAdditionalSlides: 0,
+          centeredSlides: true,
         },
         1200: {
-          slidesPerView: 1,
-          width: 389,
+          slidesPerView: 'auto',
+          loopAdditionalSlides: 1,
           centeredSlides: true,
+          loop: false,
+          initialSlide: 2,
         },
       },
     });

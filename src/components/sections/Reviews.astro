@@ -29,7 +29,7 @@ const {
       <div class="swiper-wrapper">
         {
           list.map(item => (
-            <div class="swiper-slide flex! h-auto! flex-col rounded-[24px] bg-[#f6f6f9] p-4 xl:p-8">
+            <div class="swiper-slide flex! h-auto! flex-col rounded-[24px] bg-[#f6f6f9] p-4 xl:w-[376px]! xl:p-8">
               <div class="flex items-center gap-4">
                 <img
                   class="h-auto w-12 min-w-12"
@@ -73,13 +73,14 @@ const {
       speed: 400,
       slidesPerView: 'auto',
       spaceBetween: 16,
+
       modules: [Navigation],
       breakpoints: {
         768: {
           slidesPerView: 2,
           width: null,
         },
-        1200: { slidesPerView: 1, width: 376 },
+        1200: { slidesPerView: 'auto' },
       },
     });
   });
